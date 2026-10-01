@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DapurModern - Katalog & Ulasan Peralatan Dapur</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f7fafc;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2b6cb0;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        nav {
+            background-color: #2c5282;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            color: #2b6cb0;
+            border-bottom: 3px solid #2b6cb0;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        /* Grid Produk */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .tag {
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            margin: 10px 0 5px 0;
+            color: #1a202c;
+        }
+
+        .product-desc {
+            font-size: 0.9rem;
+            color: #718096;
+            margin-bottom: 12px;
+        }
+
+        /* Tabel Perbandingan */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background-color: #edf2f7;
+            color: #2d3748;
+        }
+
+        /* Form Komentar / Ulasan */
+        .comment-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        button {
+            background-color: #2b6cb0;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: #2c5282;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a202c;
+            color: #a0aec0;
+            margin-top: 40px;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DapurModern</h1>
+        <p>Inspirasi & Rekomendasi Peralatan Dapur Terbaik untuk Rumah Anda</p>
+    </header>
+
+    <nav>
+        <a href="#katalog">Katalog Peralatan</a>
+        <a href="#perbandingan">Perbandingan Material</a>
+        <a href="#ulasan">Ulasan Pengguna</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Rekomendasi Produk -->
+        <h2 id="katalog" class="section-title">Katalog Peralatan Dapur Utama</h2>
+        
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1584992236310-6edddc08acff?w=500" alt="Pisau Dapur Stainless">
+                <div class="product-info">
+                    <span class="tag">Persiapan</span>
+                    <h3 class="product-title">Pisau Chef Stainless Steel</h3>
+                    <p class="product-desc">Pisau serbaguna Tajam dengan pegangan ergonomis, cocok untuk memotong daging dan sayuran.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500" alt="Wajan Anti Lengket">
+                <div class="product-info">
+                    <span class="tag">Memasak</span>
+                    <h3 class="product-title">Wajan Frypan Teflon Premium</h3>
+                    <p class="product-desc">Wajan anti lengket berkualitas tinggi, membutuhkan sedikit minyak untuk memasak lebih sehat.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=500" alt="Blender Serbaguna">
+                <div class="product-info">
+                    <span class="tag">Elektronik</span>
+                    <h3 class="product-title">Blender Digital High-Speed</h3>
+                    <p class="product-desc">Blender multifungsi untuk membuat jus, bumbu dapur, hingga menghancurkan es batu dengan cepat.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1585515320310-259814833e62?w=500" alt="Panci Cast Iron">
+                <div class="product-info">
+                    <span class="tag">Memasak</span>
+                    <h3 class="product-title">Panci Cast Iron Dutch Oven</h3>
+                    <p class="product-desc">Panci besi cor yang menahan panas secara merata, ideal untuk memasak sup dan masakan bersantan.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Tabel Perbandingan Material -->
+        <h2 id="perbandingan" class="section-title">Perbandingan Bahan Peralatan Masak</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Bahan Peralatan</th>
+                    <th>Keunggulan</th>
+                    <th>Kekurangan</th>
+                    <th>Perawatan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Stainless Steel</strong></td>
+                    <td>Tahan lama, tidak berkarat, tidak bereaksi dengan asam.</td>
+                    <td>Penghantar panas kurang merata jika tanpa lapisan aluminium.</td>
+                    <td>Mudah dicuci, aman untuk mesin pencuci piring.</td>
+                </tr>
+                <tr>
+                    <td><strong>Cast Iron (Besi Cor)</strong></td>
+                    <td>Menahan panas sangat lama, sangat awet.</td>
+                    <td>Berat, perlu proses *seasoning* agar tidak berkarat.</td>
+                    <td>Cuci tanpa sabun keras, keringkan langsung dan oles minyak.</td>
+                </tr>
+                <tr>
+                    <td><strong>Kramik / Non-Stick</strong></td>
+                    <td>Makanan tidak lengket, mudah dibersihkan, hemat minyak.</td>
+                    <td>Lapisan bisa terkelupas jika terkena spatula besi.</td>
+                    <td>Gunakan spatula kayu/silikon dan busa lembut.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Form Ulasan & Komentar -->
+        <h2 id="ulasan" class="section-title">Berikan Ulasan Peralatan Dapur Anda</h2>
+        <div class="comment-section">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap:</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="alat">Peralatan Dapur yang Diulas:</label>
+                    <select id="alat" name="alat">
+                        <option value="pisau">Pisau Dapur</option>
+                        <option value="wajan">Wajan / Frypan</option>
+                        <option value="blender">Blender / Mixer</option>
+                        <option value="panci">Panci / Presto</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pesan">Ulasan & Pengalaman Menggunakan:</label>
+                    <textarea id="pesan" name="pesan" rows="4" placeholder="Tuliskan pengalaman Anda menggunakan alat ini..." required></textarea>
+                </div>
+
+                <button type="submit">Kirim Ulasan</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 DapurModern. Dibuat untuk Laporan & Praktikum Web.</p>
+    </footer>
+
+</body>
+</html>
